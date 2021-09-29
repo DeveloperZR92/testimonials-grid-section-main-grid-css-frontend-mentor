@@ -1,0 +1,210 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  background-color: $Lightgrayishblue;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.grid-container {
+  width: 70%;
+  height: 75vh;
+  margin: 80px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto 20%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'first first second third'
+    'fourth fifth fifth third';
+}
+
+.grid-item1 {
+  background-color: $Moderateviolet;
+  grid-area: first;
+  border-radius: 10px;
+
+  .grid-item1-text {
+    padding: 20px;
+    margin-top: -20px;
+
+    h2 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: white;
+      opacity: 0.7;
+    }
+  }
+}
+
+.grid-item2 {
+  width: 100%;
+  background-color: $Verydarkgrayishblue;
+  grid-area: second;
+  border-radius: 10px;
+  padding: 15px;
+
+  .grid-item2-text {
+    width: 85%;
+    margin: 0 auto;
+
+    h2 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: white;
+      opacity: 0.7;
+    }
+  }
+}
+
+.grid-item3 {
+  background-color: $White;
+  grid-area: third;
+  border-radius: 10px;
+
+  .person-name {
+    .name-kira {
+      color: $Verydarkgrayishblue;
+    }
+
+    .verified-kira {
+      color: $Verydarkgrayishblue;
+      opacity: 0.75;
+    }
+  }
+
+  .grid-item3-text {
+    padding: 15px;
+    color: $Verydarkgrayishblue;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      opacity: 0.75;
+    }
+  }
+}
+
+.grid-item4 {
+  background-color: $White;
+  grid-area: fourth;
+  border-radius: 10px;
+
+  .person-name {
+    .name-jeanette {
+      color: $Verydarkgrayishblue;
+    }
+
+    .verified-jeanette {
+      color: $Verydarkgrayishblue;
+      opacity: 0.75;
+    }
+  }
+
+  .grid-item4-text {
+    padding: 20px;
+    text-align: start;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.grid-item5 {
+  background-color: $Verydarkblackishblue;
+  grid-area: fifth;
+  border-radius: 10px;
+
+  .grid-item5-text {
+    padding: 20px;
+
+    h2 {
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    p {
+      color: white;
+      opacity: 0.75;
+    }
+  }
+}
+
+.avatar {
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.name {
+  grid-area: name;
+}
+
+.verified {
+  grid-area: verified;
+}
+
+.person {
+  display: flex;
+}
+
+.person-name {
+  margin-top: 30px;
+
+  .name {
+    color: $White;
+  }
+
+  .verified {
+    color: white;
+    opacity: 0.5;
+  }
+}
+
+.attribution {
+  text-align: center;
+}
+
+@media (max-width: 475px) {
+  .grid-container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-item1 {
+    order: 1;
+  }
+
+  .grid-item2 {
+    order: 2;
+  }
+
+  .grid-item3 {
+    order: 5;
+  }
+
+  .grid-item4 {
+    order: 3;
+  }
+
+  .grid-item5 {
+    order: 4;
+  }
+}
