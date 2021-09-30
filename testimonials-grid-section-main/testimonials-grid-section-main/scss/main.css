@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  background-color: #ecf2f8;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.grid-container {
+  width: 70%;
+  max-width: 1440px;
+  margin: 80px auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: 'first first second third' 'fourth fifth fifth third';
+}
+
+.sr-only {
+  border: 0 !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+.grid-item1 {
+  background-color: #7541c8;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: first;
+  border-radius: 10px;
+}
+
+.grid-item1 .grid-item1-text {
+  padding: 20px;
+  margin-top: -20px;
+}
+
+.grid-item1 .grid-item1-text h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.grid-item1 .grid-item1-text p {
+  color: white;
+  opacity: 0.7;
+}
+
+.grid-item2 {
+  width: 100%;
+  background-color: #48556a;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: second;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.grid-item2 .grid-item2-text {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.grid-item2 .grid-item2-text h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.grid-item2 .grid-item2-text p {
+  color: white;
+  opacity: 0.7;
+}
+
+.grid-item3 {
+  background-color: white;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: third;
+  border-radius: 10px;
+}
+
+.grid-item3 .person-name .name-kira {
+  color: #48556a;
+}
+
+.grid-item3 .person-name .verified-kira {
+  color: #48556a;
+  opacity: 0.75;
+}
+
+.grid-item3 .grid-item3-text {
+  padding: 15px;
+  color: #48556a;
+}
+
+.grid-item3 .grid-item3-text h2 {
+  margin-bottom: 20px;
+}
+
+.grid-item3 .grid-item3-text p {
+  opacity: 0.75;
+}
+
+.grid-item4 {
+  background-color: white;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: fourth;
+  border-radius: 10px;
+}
+
+.grid-item4 .person-name .name-jeanette {
+  color: #48556a;
+}
+
+.grid-item4 .person-name .verified-jeanette {
+  color: #48556a;
+  opacity: 0.75;
+}
+
+.grid-item4 .grid-item4-text {
+  padding: 20px;
+  text-align: start;
+}
+
+.grid-item4 .grid-item4-text h2 {
+  margin-bottom: 20px;
+}
+
+.grid-item5 {
+  background-color: #19212e;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: fifth;
+  border-radius: 10px;
+}
+
+.grid-item5 .grid-item5-text {
+  padding: 20px;
+}
+
+.grid-item5 .grid-item5-text h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.grid-item5 .grid-item5-text p {
+  color: white;
+  opacity: 0.75;
+}
+
+.avatar {
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.name {
+  grid-area: name;
+}
+
+.verified {
+  grid-area: verified;
+}
+
+.person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.person-name {
+  margin-top: 30px;
+}
+
+.person-name .name {
+  color: white;
+}
+
+.person-name .verified {
+  color: white;
+  opacity: 0.5;
+}
+
+.attribution {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    width: 80%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .grid-item1 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .grid-item2 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .grid-item3 {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  .grid-item4 {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .grid-item5 {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  .grid-container {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 'first first second' 'fourth fifth fifth' 'third third third';
+  }
+}
+/*# sourceMappingURL=main.css.map */

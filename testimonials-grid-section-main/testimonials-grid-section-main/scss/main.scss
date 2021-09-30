@@ -1,0 +1,215 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  background-color: $Lightgrayishblue;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.grid-container {
+  width: 70%;
+  max-width: 1440px;
+  margin: 80px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'first first second third'
+    'fourth fifth fifth third';
+}
+
+.sr-only {
+  border: 0 !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+.grid-item1 {
+  background-color: $Moderateviolet;
+  grid-area: first;
+  border-radius: 10px;
+
+  .grid-item1-text {
+    padding: 20px;
+    margin-top: -20px;
+
+    h2 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: white;
+      opacity: 0.7;
+    }
+  }
+}
+
+.grid-item2 {
+  width: 100%;
+  background-color: $Verydarkgrayishblue;
+  grid-area: second;
+  border-radius: 10px;
+  padding: 15px;
+
+  .grid-item2-text {
+    width: 85%;
+    margin: 0 auto;
+
+    h2 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: white;
+      opacity: 0.7;
+    }
+  }
+}
+
+.grid-item3 {
+  background-color: $White;
+  grid-area: third;
+  border-radius: 10px;
+
+  .person-name {
+    .name-kira {
+      color: $Verydarkgrayishblue;
+    }
+
+    .verified-kira {
+      color: $Verydarkgrayishblue;
+      opacity: 0.75;
+    }
+  }
+
+  .grid-item3-text {
+    padding: 15px;
+    color: $Verydarkgrayishblue;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      opacity: 0.75;
+    }
+  }
+}
+
+.grid-item4 {
+  background-color: $White;
+  grid-area: fourth;
+  border-radius: 10px;
+
+  .person-name {
+    .name-jeanette {
+      color: $Verydarkgrayishblue;
+    }
+
+    .verified-jeanette {
+      color: $Verydarkgrayishblue;
+      opacity: 0.75;
+    }
+  }
+
+  .grid-item4-text {
+    padding: 20px;
+    text-align: start;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.grid-item5 {
+  background-color: $Verydarkblackishblue;
+  grid-area: fifth;
+  border-radius: 10px;
+
+  .grid-item5-text {
+    padding: 20px;
+
+    h2 {
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    p {
+      color: white;
+      opacity: 0.75;
+    }
+  }
+}
+
+.avatar {
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.name {
+  grid-area: name;
+}
+
+.verified {
+  grid-area: verified;
+}
+
+.person {
+  display: flex;
+}
+
+.person-name {
+  margin-top: 30px;
+
+  .name {
+    color: $White;
+  }
+
+  .verified {
+    color: white;
+    opacity: 0.5;
+  }
+}
+
+.attribution {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'first'
+      'second'
+      'fourth'
+      'fifth'
+      'third';
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      'first first second'
+      'fourth fifth fifth'
+      'third third third';
+  }
+}
